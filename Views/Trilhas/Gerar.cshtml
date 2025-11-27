@@ -154,22 +154,7 @@
             margin-top: 1rem;
             box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4), 0 0 0 4px rgba(255, 193, 7, 0.1);
             animation: fadeIn 0.5s ease, pulseGlow 2s infinite;
-            position: relative;
         }
-
-            .info-notice::before {
-                content: "";
-                position: absolute;
-                top: -3px;
-                left: -3px;
-                right: -3px;
-                bottom: -3px;
-                background: linear-gradient(45deg, #ffc107, #ff9800, #ffc107);
-                border-radius: 0.75rem;
-                z-index: -1;
-                animation: borderRotate 3s linear infinite;
-                opacity: 0.5;
-            }
 
             .info-notice i {
                 font-size: 1.3rem;
@@ -209,19 +194,6 @@
 
         75% {
             transform: rotate(15deg);
-        }
-
-        }
-
-        @@keyframes borderRotate {
-            0%
-
-        {
-            transform: rotate(0deg);
-        }
-
-        100% {
-            transform: rotate(360deg);
         }
 
         }
@@ -450,7 +422,7 @@
 
                                 <!-- Info Notice -->
                                 <div class="info-notice">
-                                    <i class="fas fa-info-circle"></i>
+                                    <i class="fas fa-exclamation-triangle"></i>
                                     <strong>LEIA COM ATENÇÃO!</strong> Após clicar em gerar, verifique os arquivos do seu celular - os certificados estarão lá!
                                 </div>
 
