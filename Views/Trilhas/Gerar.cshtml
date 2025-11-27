@@ -145,26 +145,88 @@
 
         /* Info Notice */
         .info-notice {
-            background: linear-gradient(135deg, #17a2b8 0%, #138496 100%);
+            background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%);
+            border: 3px solid #ff9800;
             border-radius: 0.75rem;
             padding: 1rem 1.5rem;
-            color: #ffffff;
+            color: #000000;
             text-align: center;
             margin-top: 1rem;
-            box-shadow: 0 4px 12px rgba(23, 162, 184, 0.2);
-            animation: fadeIn 0.5s ease;
+            box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4), 0 0 0 4px rgba(255, 193, 7, 0.1);
+            animation: fadeIn 0.5s ease, pulseGlow 2s infinite;
+            position: relative;
         }
 
+            .info-notice::before {
+                content: "";
+                position: absolute;
+                top: -3px;
+                left: -3px;
+                right: -3px;
+                bottom: -3px;
+                background: linear-gradient(45deg, #ffc107, #ff9800, #ffc107);
+                border-radius: 0.75rem;
+                z-index: -1;
+                animation: borderRotate 3s linear infinite;
+                opacity: 0.5;
+            }
+
             .info-notice i {
-                font-size: 1.2rem;
+                font-size: 1.3rem;
                 margin-right: 0.5rem;
+                animation: wobble 1s ease infinite;
+                display: inline-block;
             }
 
             .info-notice strong {
-                font-size: 1rem;
+                font-size: 1.05rem;
+                font-weight: 800;
             }
 
-        @@keyframes fadeIn {
+        @keyframes pulseGlow {
+            0%, 100%
+
+        {
+            box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4), 0 0 0 4px rgba(255, 193, 7, 0.1);
+        }
+
+        50% {
+            box-shadow: 0 4px 20px rgba(255, 193, 7, 0.6), 0 0 0 6px rgba(255, 193, 7, 0.2);
+        }
+
+        }
+
+        @keyframes wobble {
+            0%, 100%
+
+        {
+            transform: rotate(0deg);
+        }
+
+        25% {
+            transform: rotate(-15deg);
+        }
+
+        75% {
+            transform: rotate(15deg);
+        }
+
+        }
+
+        @keyframes borderRotate {
+            0%
+
+        {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+
+        }
+
+        @keyframes fadeIn {
             from
 
         {
@@ -177,7 +239,7 @@
 
         }
 
-        @@keyframes fadeInUp {
+        @keyframes fadeInUp {
             from
 
         {
@@ -192,7 +254,7 @@
 
         }
 
-        @@keyframes fadeInScale {
+        @keyframes fadeInScale {
             from
 
         {
@@ -207,7 +269,7 @@
 
         }
 
-        @@keyframes bounce {
+        @keyframes bounce {
             0%, 100%
 
         {
@@ -220,7 +282,7 @@
 
         }
 
-        @@keyframes float {
+        @keyframes float {
             0%, 100%
 
         {
@@ -233,7 +295,7 @@
 
         }
 
-        @@keyframes heartBeat {
+        @keyframes heartBeat {
             0%, 100%
 
         {
@@ -251,7 +313,7 @@
         }
 
         /* Mobile Responsiveness */
-        @@media (max-width: 768px) {
+        @media (max-width: 768px) {
             .instagram-card
 
         {
@@ -338,7 +400,7 @@
                                    target="_blank"
                                    rel="noopener noreferrer"
                                    class="instagram-link">
-                                    @@expertmindacademy
+                                    @expertmindacademy
                                 </a>
                                 irei te dar um presentinho. ❤️
                             </p>
