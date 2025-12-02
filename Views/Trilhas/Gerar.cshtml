@@ -8,6 +8,22 @@
     <link href="~/css/Trilhas/GerarTrilha.css" rel="stylesheet" />
     <link href="~/css/ThemaVarieble.css" rel="stylesheet" />
     <style>
+        /* Estilos para a mensagem de bônus na success message */
+        .success-message .border-top {
+            border-width: 2px !important;
+        }
+
+        .success-message a {
+            transition: all 0.3s ease;
+        }
+
+            .success-message a:hover {
+                text-decoration: none !important;
+                opacity: 0.9;
+                transform: translateY(-2px);
+                display: inline-block;
+            }
+
         /* Instagram Card Styles */
         .instagram-card {
             background: linear-gradient(135deg, #322c3e 0%, #7a748b 100%);
@@ -317,6 +333,7 @@
             padding: 0.875rem 1.25rem;
         }
 
+
         }</style>
 }
 
@@ -350,6 +367,22 @@
                         </div>
                         <h2>Certificado Concluído!</h2>
                         <p>O seu certificado foi baixado com sucesso, verifique os arquivos do seu celular</p>
+
+                        <!-- Frase criativa adicional -->
+                        <div class="mt-4 pt-3 border-top border-white border-opacity-25">
+                            <p class="mb-2" style="font-size: 1.1rem; font-style: italic;">
+                                <i class="fas fa-gift me-2"></i> Bônus Especial:
+                            </p>
+                            <p class="mb-0" style="font-size: 1.05rem;">
+                                Se você enviar uma foto com o certificado em mãos ou uma foto sua segurando o certificado
+                                em nosso Instagram <a href="https://www.instagram.com/expertmindacademy"
+                                                      target="_blank"
+                                                      rel="noopener noreferrer"
+                                                      style="color: #ffffff; font-weight: 600; text-decoration: underline;">
+                                    @@expertmindacademy
+                                </a> irei te dar um presentinho. ❤️
+                            </p>
+                        </div>
                     </div>
 
                     <!-- Conteúdo Principal -->
